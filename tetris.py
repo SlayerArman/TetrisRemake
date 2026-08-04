@@ -8,6 +8,10 @@ class Tetris:
         self.sprite_group = pg.sprite.Group()
         self.system = System(self)
 
+    def check_system_landing(self):
+        if self.system.landing:
+            self.system = System(self)
+
     def control(self, pressed_key):
         if pressed_key == pg.K_LEFT:
             self.system.move(direction='left')
@@ -23,6 +27,7 @@ class Tetris:
     def update(self):
         if self.app.anim_trigger:
             self.system.update()
+            self.check_system_landing
         self.sprite_group.update()
   
     def draw(self):
