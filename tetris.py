@@ -14,14 +14,35 @@ class Text:
             (WIN_W * 0.595, WIN_H * 0.02),
             text='3AM',
             fgcolor='red',
-            size=TILE_SIZE * 1.5)
+            size=TILE_SIZE * 1.4)
 
         self.font.render_to(
             self.app.screen,
-            (WIN_W * 0.68, WIN_H * 0.09),
+            (WIN_W * 0.68, WIN_H * 0.08),
             text='TETRO',
             fgcolor='white',
-            size=TILE_SIZE * 1.5)
+            size=TILE_SIZE * 1.4)
+
+        self.font.render_to(
+            self.app.screen,
+             (WIN_W * 0.68, WIN_H * 0.22),
+            text='NEXT',
+            fgcolor='yellow',
+            size=TILE_SIZE * 1.4)
+
+        self.font.render_to(
+            self.app.screen,
+            (WIN_W * 0.68, WIN_H * 0.67),
+            text='SCORE',
+            fgcolor='yellow',
+            size=TILE_SIZE * 1.4)
+
+        self.font.render_to(
+            self.app.screen,
+            (WIN_W * 0.735, WIN_H * 0.8),
+            text='000',
+            fgcolor='white',
+            size=TILE_SIZE * 1.4)
         
 
 class Tetris:
