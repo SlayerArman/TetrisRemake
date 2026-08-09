@@ -8,8 +8,9 @@ class Block(pg.sprite.Sprite):
         self.alive = True
 
         super().__init__(system.tetris.sprite_group)
-        self.image = pg.Surface([TILE_SIZE, TILE_SIZE])
-        pg.draw.rect(self.image, 'orange', (1, 1, TILE_SIZE - 2, TILE_SIZE - 2), border_radius = 8)
+        self.image = system.image
+        #self.image = pg.Surface([TILE_SIZE, TILE_SIZE])
+        #pg.draw.rect(self.image, 'orange', (1, 1, TILE_SIZE - 2, TILE_SIZE - 2), border_radius = 8)
         self.rect = self.image.get_rect()
 
     def is_alive(self):
@@ -42,6 +43,7 @@ class System:
     def __init__(self, tetris):
         self.tetris = tetris
         self.shape = random.choice(list(SYSTEMS.keys()))
+        self.image = random.choice(tetris.app.images)
         self.blocks = [Block(self, pos) for pos in SYSTEMS[self.shape]]
         self.landing = False
 
