@@ -1,6 +1,28 @@
 from settings import *
 import math
 from system import System
+import pygame.freetype as ft
+
+class Text:
+    def __init__(self, app):
+        self.app = app
+        self.font = ft.Font(FONT_PATH)
+
+    def draw(self):
+        self.font.render_to(
+            self.app.screen,
+            (WIN_W * 0.595, WIN_H * 0.02),
+            text='3AM',
+            fgcolor='red',
+            size=TILE_SIZE * 1.5)
+
+        self.font.render_to(
+            self.app.screen,
+            (WIN_W * 0.68, WIN_H * 0.09),
+            text='TETRO',
+            fgcolor='white',
+            size=TILE_SIZE * 1.5)
+        
 
 class Tetris:
     def __init__(self, app):
@@ -34,13 +56,21 @@ class Tetris:
     def get_field_array(self):
         return [[0 for x in range(FIELD_W)] for y in range(FIELD_H)]
 
+    def is_game_over(self):
+        if self.system.blocks[0].pos.y == INIT_POS_OFFSET[1]:
+            pg.time.wait(300)
+            return True
+
     def check_system_landing(self):
         if self.system.landing:
-            self.speed_up = False
-            self.put_system_blocks_in_array()
-            self.next_system.current = True
-            self.system = self.next_system
-            self.next_system = System(self, current=False)
+            if self.is_game_over():
+                self.__init__(self.app)
+            else:
+                self.speed_up = False
+                self.put_system_blocks_in_array()
+                self.next_system.current = True
+                self.system = self.next_system
+                self.next_system = System(self, current=False)
 
     def control(self, pressed_key):
         if (pressed_key == pg.K_LEFT or pressed_key == pg.K_a):

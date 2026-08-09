@@ -4,9 +4,10 @@ vec = pg.math.Vector2
 
 FPS = 60
 FIELD_COLOR = (255, 255, 255)
-BG_COLOR = (200, 255, 255)
+BG_COLOR = (0, 0, 92)
 
 SPRITE_DIR_PATH = 'assets/sprites'
+FONT_PATH = 'assets/fonts/fontyboy.ttf'
 
 ANIM_TIME_INTERVAL = 300
 FAST_ANIM_TIME_INTERVAL = 15
