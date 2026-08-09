@@ -23,10 +23,12 @@ class Tetris:
             self.system = System(self)
 
     def control(self, pressed_key):
-        if pressed_key == pg.K_LEFT:
+        if (pressed_key == pg.K_LEFT or pressed_key == pg.K_a):
             self.system.move(direction='left')
-        elif pressed_key == pg.K_RIGHT:
+        elif (pressed_key == pg.K_RIGHT or pressed_key == pg.K_d):
             self.system.move(direction='right')
+        elif (pressed_key == pg.K_UP or pressed_key == pg.K_w):
+            self.system.rotate()
 
     def draw_grid(self):
         for x in range(FIELD_W):
