@@ -9,6 +9,21 @@ class Tetris:
         self.field_array = self.get_field_array()
         self.system = System(self)
 
+    def check_full_lines(self):
+        row = FIELD_H - 1
+        for y in range(FIELD_H - 1, -1, -1):
+            if sum(map(bool, self.field_array[y])) < FIELD_W:
+                for x in range(FIELD_W):
+                    self.field_array[row][x] = self.field_array[y][x]
+
+                    if self.field_array[row][x]:
+                        self.field_array[row][x].pos = vec(x, row)
+                row -= 1
+            else:
+                for x in range(FIELD_W):
+                    self.field_array[y][x].alive = False
+                    self.field_array[y][x] = 0  
+
     def put_system_blocks_in_array(self):
         for block in self.system.blocks:
             x, y = int(block.pos.x), int(block.pos.y)
@@ -40,6 +55,8 @@ class Tetris:
         if self.app.anim_trigger:
             self.system.update()
             self.check_system_landing()
+            self.check_full_lines()
+
         self.sprite_group.update()
   
     def draw(self):
