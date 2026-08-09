@@ -40,7 +40,7 @@ class Text:
         self.font.render_to(
             self.app.screen,
             (WIN_W * 0.735, WIN_H * 0.8),
-            text='000',
+            text=f'{self.app.tetris.score}',
             fgcolor='white',
             size=TILE_SIZE * 1.4)
         
@@ -53,6 +53,14 @@ class Tetris:
         self.system = System(self)
         self.next_system  = System(self, current=False)
         self.speed_up = False
+
+        self.score = 0
+        self.full_lines = 0
+        self.points_per_lines = {0: 0, 1: 100, 2: 300, 3: 700, 4: 1500}
+
+    def get_score(self):
+        self.score += self.points_per_lines[self.full_lines]
+        self.full_lines = 0
 
     def check_full_lines(self):
         row = FIELD_H - 1
@@ -67,7 +75,9 @@ class Tetris:
             else:
                 for x in range(FIELD_W):
                     self.field_array[y][x].alive = False
-                    self.field_array[y][x] = 0  
+                    self.field_array[y][x] = 0 
+
+                self.full_lines += 1 
 
     def put_system_blocks_in_array(self):
         for block in self.system.blocks:
@@ -115,6 +125,7 @@ class Tetris:
             self.system.update()
             self.check_system_landing()
             self.check_full_lines()
+            self.get_score()
 
         self.sprite_group.update()
   
