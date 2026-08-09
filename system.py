@@ -19,9 +19,13 @@ class Block(pg.sprite.Sprite):
 
     def is_collide(self, pos):
         x, y = int(pos.x), int(pos.y)
-        if 0 <= x < FIELD_W and 0 <= y < FIELD_H:
+        if x < 0 or x >= FIELD_W or y >= FIELD_H:
+             return True
+        if y < 0:
             return False
-        return True
+        if self.system.tetris.field_array[y][x]:
+            return True
+        return False
 
 class System:
     def __init__(self, tetris):
