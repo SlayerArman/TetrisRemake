@@ -8,6 +8,7 @@ class Tetris:
         self.sprite_group = pg.sprite.Group()
         self.field_array = self.get_field_array()
         self.system = System(self)
+        self.next_system  = System(self, current=False)
         self.speed_up = False
 
     def check_full_lines(self):
@@ -37,7 +38,9 @@ class Tetris:
         if self.system.landing:
             self.speed_up = False
             self.put_system_blocks_in_array()
-            self.system = System(self)
+            self.next_system.current = True
+            self.system = self.next_system
+            self.next_system = System(self, current=False)
 
     def control(self, pressed_key):
         if (pressed_key == pg.K_LEFT or pressed_key == pg.K_a):
