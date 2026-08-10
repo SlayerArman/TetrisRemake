@@ -32,7 +32,7 @@ class Text:
 
         self.font.render_to(
             self.app.screen,
-            (WIN_W * 0.68, WIN_H * 0.67),
+            (WIN_W * 0.66, WIN_H * 0.67),
             text='SCORE',
             fgcolor='yellow',
             size=TILE_SIZE * 1.4)
