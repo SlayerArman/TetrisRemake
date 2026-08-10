@@ -12,6 +12,12 @@ class Block(pg.sprite.Sprite):
         self.image = system.image
         self.rect = self.image.get_rect()
 
+        self.bloom_image = self.image.copy()
+        self.bloom_image.set_alpha(BLOOM_ALPHA)
+        self.bloom_image = pg.transform.smoothscale(
+            self.bloom_image, (TILE_SIZE + BLOOM_SIZE * 2, TILE_SIZE + BLOOM_SIZE * 2)
+        )
+
         self.sfx_image = self.image.copy()
         self.sfx_image.set_alpha(110)
         self.sfx_speed = random.uniform(0.2, 0.6)
@@ -36,6 +42,12 @@ class Block(pg.sprite.Sprite):
                 self.sfx_run()
             else:
                 self.kill()
+
+    def draw_bloom(self, screen):
+        bloom_rect = self.bloom_image.get_rect(
+            center=self.rect.center)
+
+        screen.blit(self.bloom_image, bloom_rect)
 
     def rotate(self, pivot_pos):
         translated = self.pos - pivot_pos

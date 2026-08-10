@@ -131,4 +131,6 @@ class Tetris:
   
     def draw(self):
         self.draw_grid()
+        for block in self.sprite_group:
+            block.draw_bloom(self.app.screen)
         self.sprite_group.draw(self.app.screen)

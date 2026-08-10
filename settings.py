@@ -7,6 +7,9 @@ FIELD_COLOR = (255, 255, 255)
 BG_COLOR = (20, 20, 20)
 BACKGROUND_IMAGE_PATH = 'assets/background.png'
 MUSIC_PATH = 'assets/music.ogg'
+GRID_COLOR = (20, 20, 20)
+BLOOM_SIZE = 5
+BLOOM_ALPHA = 70
 
 SPRITE_DIR_PATH = 'assets/sprites'
 FONT_PATH = 'assets/fonts/fontyboy.ttf'
