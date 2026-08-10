@@ -39,7 +39,7 @@ class Text:
 
         self.font.render_to(
             self.app.screen,
-            (WIN_W * 0.735, WIN_H * 0.8),
+            (WIN_W * 0.7, WIN_H * 0.8),
             text=f'{self.app.tetris.score}',
             fgcolor='white',
             size=TILE_SIZE * 1.4)

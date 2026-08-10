@@ -9,6 +9,8 @@ class App:
         pg.mixer.init()
         pg.display.set_caption('Tetris')
         self.screen = pg.display.set_mode(WIN_RES)
+        icon = pg.image.load('assets/icon.png').convert_alpha()
+        pg.display.set_icon(icon)
         self.clock = pg.time.Clock()
         self.set_timer()
         self.images = self.load_images()
