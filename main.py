@@ -6,13 +6,25 @@ import pathlib
 class App:
     def __init__ (self):
         pg.init()
+        pg.mixer.init()
         pg.display.set_caption('Tetris')
         self.screen = pg.display.set_mode(WIN_RES)
         self.clock = pg.time.Clock()
         self.set_timer()
         self.images = self.load_images()
+        self.background = self.load_background()
+        self.load_music()
         self.tetris = Tetris(self)
         self.text = Text(self)
+
+    def load_background(self):
+        background = pg.image.load(BACKGROUND_IMAGE_PATH).convert()
+        return pg.transform.scale(background, FIELD_RES)
+
+    def load_music(self):
+        pg.mixer.music.load(MUSIC_PATH)
+        pg.mixer.music.set_volume(0.5)
+        pg.mixer.music.play(-1)
 
     def load_images(self):
         files = [item for item in pathlib.Path(SPRITE_DIR_PATH).rglob('*.png') if item.is_file()]
@@ -34,7 +46,7 @@ class App:
 
     def draw(self):
         self.screen.fill(color=BG_COLOR)
-        self.screen.fill(color=FIELD_COLOR, rect=(0, 0, *FIELD_RES))
+        self.screen.blit(self.background, (0, 0))
         self.tetris.draw()
         self.text.draw()
         pg.display.flip()

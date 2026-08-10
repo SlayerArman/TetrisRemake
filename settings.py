@@ -4,7 +4,9 @@ vec = pg.math.Vector2
 
 FPS = 60
 FIELD_COLOR = (255, 255, 255)
-BG_COLOR = (0, 0, 92)
+BG_COLOR = (20, 20, 20)
+BACKGROUND_IMAGE_PATH = 'assets/background.png'
+MUSIC_PATH = 'assets/music.ogg'
 
 SPRITE_DIR_PATH = 'assets/sprites'
 FONT_PATH = 'assets/fonts/fontyboy.ttf'
