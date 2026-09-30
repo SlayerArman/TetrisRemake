@@ -4,7 +4,7 @@
 
 This is a Python/Pygame based Tetris game
 
-## How to Play 📥
+## How to Play 
 
 Downlaod the **3AM Tetro.exe** from the repository files.
 
@@ -17,7 +17,7 @@ Downlaod the **3AM Tetro.exe** from the repository files.
 | `↑` / `W` | Rotate piece |
 | `ESC` | Quit game 
 
-## Screenshots 📸
+## Screenshots
 |<img width="383" height="466" alt="Screenshot 2026-08-10 135630" src="https://github.com/user-attachments/assets/028b5ff0-e0f8-444f-b763-e0bb563d804e" />
 <img width="385" height="476" alt="Screenshot 2026-08-10 135600" src="https://github.com/user-attachments/assets/de7cca54-93c6-4797-9631-ac6cb692a79d" />
 
@@ -34,14 +34,14 @@ SYSTEMS = {
 }
 ```
 
-## Built With 🛠️
+## Built With
 
 - **Python**
 - **Pygame**
 - **Pygame Freetype**
 - **PyInstaller**
 
-## Base Text 📜
+## Base Text
 ```python
 def draw(self):
         self.font.render_to(
@@ -52,7 +52,7 @@ def draw(self):
             size=TILE_SIZE * 1.4)
 ```
 
-## Project Structure 📁
+## Project Structure
 
 ```text
 Tetris/
@@ -72,11 +72,11 @@ Tetris/
 └── main.exe
 ```
 
-## Future Updates 🎯
+## Future Updates
 - Add More UI Options
 - Add Animated Background
 - Add Better Sprites
 - More Game Logics
 
-## Author 👤
+## Author
 Created with ❤️ by Arman Ahmad
