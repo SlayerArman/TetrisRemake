@@ -5,16 +5,15 @@ This is a Python/Pygame based Tetris game
 
 ## How to Play 
 
-Downlaod the **3AM Tetro.exe** from the repository files.
+Downlaod the **3AM Tetro.exe** from the release and also download and extract the assets zip file.
 
 ## Controls 🕹️
-| Key | Action |
-|---|---|
-| `←` / `A` | Move left |
-| `→` / `D` | Move right |
-| `↓` / `S` | Move down faster |
-| `↑` / `W` | Rotate piece |
-| `ESC` | Quit game 
+
+- **← / A** to Move left
+- **→ / D** to Move right
+- **↓ / S** to Move down faster
+- **↑ / W** to Rotate piece
+- **ESC** to Quit game
 
 ## Screenshots
 |<img width="383" height="466" alt="Screenshot 2026-08-10 135630" src="https://github.com/user-attachments/assets/028b5ff0-e0f8-444f-b763-e0bb563d804e" />
@@ -26,12 +25,6 @@ Downlaod the **3AM Tetro.exe** from the repository files.
 - **Pygame**
 - **Pygame Freetype**
 - **PyInstaller**
-
-## Future Updates
-- Add More UI Options
-- Add Animated Background
-- Add Better Sprites
-- More Game Logics
 
 ## The Slave:
 Created with ❤️ by Arman Ahmad
