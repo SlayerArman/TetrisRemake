@@ -1,7 +1,9 @@
+import asyncio
 from settings import *
 from tetris import Tetris, Text
 import sys
 import pathlib
+import pygame as pg
 
 class App:
     def __init__ (self):
@@ -67,12 +69,16 @@ class App:
             elif event.type == self.fast_user_event:
                 self.fast_anim_trigger = True
 
-    def run(self):
+    async def run(self):
         while True:
             self.check_events()
             self.update()
             self.draw()
+            await asyncio.sleep(0)
+
+async def main():
+    app = App()
+    await app.run()
 
 if __name__ == '__main__':
-    app = App()
-    app.run()
+    asyncio.run(main())
