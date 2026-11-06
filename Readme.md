@@ -2,7 +2,7 @@
 
 > A remake of Tetris but specially designed to play at 3AM with dark theme and soothing background music.
 
-This is a Python/Pygame based Tetris game.
+3AM Tetro is a classic Tetris-inspired puzzle game where you arrange falling blocks to complete horizontal lines and earn points. The goal is to clear as many lines as possible without letting the blocks reach the top. It features simple gameplay, a late-night arcade atmosphere, and the classic challenge of beating your own high score. Made with Python using Pygame.
 
 ## How to Play? 
 
