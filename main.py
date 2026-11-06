@@ -11,7 +11,7 @@ class App:
         pg.mixer.init()
         pg.display.set_caption('Tetris')
         self.screen = pg.display.set_mode(WIN_RES)
-        icon = pg.image.load('assets/icon.png').convert_alpha()
+        icon = pg.image.load(resource_path('assets/icon.png')).convert_alpha()
         pg.display.set_icon(icon)
         self.clock = pg.time.Clock()
         self.set_timer()
@@ -22,11 +22,11 @@ class App:
         self.text = Text(self)
 
     def load_background(self):
-        background = pg.image.load(BACKGROUND_IMAGE_PATH).convert()
+        background = pg.image.load(resource_path(BACKGROUND_IMAGE_PATH)).convert()
         return pg.transform.scale(background, FIELD_RES)
 
     def load_music(self):
-        pg.mixer.music.load(MUSIC_PATH)
+        pg.mixer.music.load(resource_path(MUSIC_PATH))
         pg.mixer.music.set_volume(0.5)
         pg.mixer.music.play(-1)
 
