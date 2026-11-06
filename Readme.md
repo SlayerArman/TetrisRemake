@@ -19,6 +19,9 @@ Downlaod the **3AM Tetro.exe** from the release and also download and extract th
 - **ESC** to Quit game
 
 ## Screenshots
+<img width="376" height="443" alt="Screenshot 2026-11-06 151807" src="https://github.com/user-attachments/assets/fdca46ef-0bf4-476b-ba58-da47d314ace5" />
+<img width="373" height="445" alt="Screenshot 2026-11-06 152009" src="https://github.com/user-attachments/assets/8fc6ea01-6d36-48ef-8ba9-084657bd26f5" />
+
 
 
 ## Built With:
