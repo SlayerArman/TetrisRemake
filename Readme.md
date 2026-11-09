@@ -33,7 +33,7 @@ There are two releases. Each release have a different theme of the tetris game.
 
 ## Idea
 
-So this project for **3AM** a YSWS of Hackclub. It was mainly about building something with dark theme. At that time I was listening to a very soothing and nostalgic music. so I thought to build a game with that music as in background. And then I got ideaa for building a retro game for more nostalgia and yeah I went with Tetris. The Epic game by Nintendo.
+So this project for **3AM** a YSWS of Hackclub. It was mainly about building something with dark theme. And then I got idea for building a retro game for more nostalgia and yeah I went with Tetris. I got the tutorial from Coder's Space from Youtube. The Sprites I used for Tetrominos are made by me in Aseprite. I got the background from Pinterest.
 
 ### New Changes
 
