@@ -21,8 +21,9 @@ There are two releases. Each release have a different theme of the tetris game.
 - **ESC** to Quit game
 
 ## Screenshots
-<img width="376" height="443" alt="Screenshot 2026-11-06 151807" src="https://github.com/user-attachments/assets/fdca46ef-0bf4-476b-ba58-da47d314ace5" />
-<img width="373" height="445" alt="Screenshot 2026-11-06 152009" src="https://github.com/user-attachments/assets/8fc6ea01-6d36-48ef-8ba9-084657bd26f5" />
+<img width="376" height="449" alt="Screenshot 2026-11-09 115740" src="https://github.com/user-attachments/assets/536ec209-8a13-478c-a3b8-60bcdcdc6a6e" />
+<img width="381" height="449" alt="Screenshot 2026-11-09 115517" src="https://github.com/user-attachments/assets/6f530a27-80e9-497d-ae3b-9aef1db3188e" />
+
 
 ## Built With:
 
