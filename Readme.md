@@ -36,8 +36,9 @@ There are two releases. Each release have a different theme of the tetris game.
 
 So this project for **3AM** a YSWS of Hackclub. It was mainly about building something with dark theme. And then I got idea for building a retro game for more nostalgia and yeah I went with Tetris. I got the tutorial from Coder's Space from Youtube. The Sprites I used for Tetrominos are made by me in Aseprite. I got the background from Pinterest.
 
-### New Changes
+### New Changes & Credits
 
+The Background used in the game is Free Licensed on Vecteezy: https://www.vecteezy.com/photo/33046528-at-night-in-stone-road-generative-ai
 The previous game build was of dark & relaxing theme but now I have added spooky sprites and new music.
  
 ## The Slave
