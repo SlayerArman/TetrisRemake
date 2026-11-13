@@ -65,7 +65,7 @@ class Block(pg.sprite.Sprite):
     def is_collide(self, pos):
         x, y = int(pos.x), int(pos.y)
         if x < 0 or x >= FIELD_W or y >= FIELD_H:
-             return True
+            return True
         if y < 0:
             return False
         if self.system.tetris.field_array[y][x]:
@@ -80,6 +80,17 @@ class System:
         self.blocks = [Block(self, pos) for pos in SYSTEMS[self.shape]]
         self.landing = False
         self.current = current
+
+    def get_ghost_positions(self):
+        ghost_positions = [vec(block.pos) for block in self.blocks]
+        
+        while True:
+            next_positions = [pos + MOVE_DIRECTIONS['down'] for pos in ghost_positions]
+            if self.is_collide(next_positions):
+                break
+            ghost_positions = next_positions
+            
+        return ghost_positions
 
     def rotate(self):
         pivot_pos = self.blocks[0].pos

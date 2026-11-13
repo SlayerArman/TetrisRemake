@@ -1,12 +1,12 @@
 import asyncio
 from settings import *
-from tetris import Tetris, Text
+from tetris import Tetris, Text, save_high_score
 import sys
 import pathlib
 import pygame as pg
 
 class App:
-    def __init__ (self):
+    def __init__(self):
         pg.init()
         pg.mixer.init()
         pg.display.set_caption('Tetris')
@@ -60,6 +60,7 @@ class App:
         self.fast_anim_trigger = False
         for event in pg.event.get():
             if event.type == pg.QUIT or (event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE):
+                save_high_score(self.tetris.score, self.tetris.high_score)
                 pg.quit()
                 sys.exit()
             elif event.type == pg.KEYDOWN:

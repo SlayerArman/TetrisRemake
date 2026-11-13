@@ -38,7 +38,7 @@ So this project for **3AM** a YSWS of Hackclub. It was mainly about building som
 
 ### New Changes & Credits
 
-The Background used in the game is Free Licensed on Vecteezy: https://www.vecteezy.com/photo/33046528-at-night-in-stone-road-generative-ai
+The Background used in the game is Free Licensed on Magnific: https://www.magnific.com/free-ai-image/cartoon-halloween-wallpaper_358277416.htm#fromView=search&page=1&position=6&uuid=45ea388f-9532-435c-9558-efca0306fad7&track=ais_hybrid&query=Halloween+game+background
 The previous game build was of dark & relaxing theme but now I have added spooky sprites and new music.
  
 ## The Slave
